@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Smart, Not Hard! | Ho Lap College (Sponsored by Sik Sik Yuen) Study Skills Booklet</title>
+
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --sky: #e0f2fe;
+      --purple: #7c3aed;
+      --pink: #ec4899;
+      --green: #16a34a;
+      --yellow: #facc15;
+      --orange: #f97316;
+      --red: #ef4444;
+      --dark: #111827;
+      --grey: #6b7280;
+      --light: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", "Noto Sans TC", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.16), transparent 28%),
+        linear-gradient(180deg, #f8fafc 0%, #eef6ff 45%, #fdf2f8 100%);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    body.dark-mode {
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.2), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #0f172a 55%, #1e1b4b 100%);
+      color: #e5e7eb;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .app {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    body.dark-mode .topbar {
+      background: rgba(15, 23, 42, 0.88);
+      border-bottom-color: rgba(51, 65, 85, 0.9);
+    }
+
+    .topbar-inner {
+      max-width: 1280px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      min-width: 0;
+    }
+
+    .school-logo {
+      width: 260px;
+      max-width: 42vw;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background: white;
+      border-radius: 14px;
+      padding: 6px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .brand-text {
+      font-size: 22px;
+      line-height: 1.15;
+      color: var(--dark);
+      white-space: nowrap;
+    }
+
+    body.dark-mode .brand-text {
+      color: #ffffff;
+    }
+
+    .brand-text small {
+      display: block;
+      color: var(--grey);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0;
+      margin-top: 4px;
+      white-space: normal;
+    }
+
+    body.dark-mode .brand-text small {
+      color: #cbd5e1;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .pill-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: #111827;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .pill-btn.secondary {
+      background: white;
+      color: var(--dark);
+      border: 1px solid var(--border);
+    }
+
+    body.dark-mode .pill-btn.secondary {
+      background: #1e293b;
+      color: white;
+      border-color: #334155;
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+    }
+
+    .layout {
+      max-width: 1280px;
+      margin: auto;
+      padding: 28px 20px 80px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 24px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      max-height: calc(100vh - 120px);
+      overflow: auto;
+    }
+
+    body.dark-mode .sidebar {
+      background: rgba(15, 23, 42, 0.84);
+      border-color: #334155;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      color: var(--grey);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    body.dark-mode .sidebar h3 {
+      color: #cbd5e1;
+    }
+
+    .nav-btn {
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      border-radius: 16px;
+      padding: 11px 12px;
+      cursor: pointer;
+      font-weight: 800;
+      color: #334155;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transition: 0.2s;
+      margin-bottom: 5px;
+    }
+
+    body.dark-mode .nav-btn {
+      color: #e2e8f0;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: linear-gradient(135deg, #dbeafe, #fce7f3);
+      color: var(--blue-dark);
+      transform: translateX(3px);
+    }
+
+    body.dark-mode .nav-btn:hover,
+    body.dark-mode .nav-btn.active {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(124, 58, 237, 0.35));
+      color: white;
+    }
+
+    .nav-number {
+      min-width: 30px;
+      height: 30px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 13px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+    }
+
+    .hero {
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(124, 58, 237, 0.9)),
+        radial-gradient(circle at 85% 15%, rgba(250, 204, 21, 0.6), transparent 25%);
+      color: white;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-school-logo-wrap {
+      display: inline-block;
+      background: white;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.22);
+    }
+
+    .hero-school-logo {
+      width: 360px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 66px);
+      line-height: 1.03;
+      margin: 0 0 18px;
+      letter-spacing: -0.06em;
+    }
+
+    .school-name-hero {
+      font-size: 20px;
+      font-weight: 900;
+      margin: -4px 0 18px;
+      color: rgba(255, 255, 255, 0.96);
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 760px;
+      margin: 0 0 22px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+      padding: 22px;
+      backdrop-filter: blur(10px);
+    }
+
+    .student-lines {
+      display: grid;
+      gap: 13px;
+    }
+
+    .line {
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .white-btn {
+      background: white;
+      color: var(--blue-dark);
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-weight: 900;
+      transition: 0.2s;
+    }
+
+    .ghost-btn {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-weight: 900;
+      transition: 0.2s;
+    }
+
+    .white-btn:hover,
+    .ghost-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .illustration {
+      min-height: 290px;
+      position: relative;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 999px;
+      filter: drop-shadow(0 18px 22px rgba(15, 23, 42, 0.25));
+    }
+
+    .book {
+      width: 190px;
+      height: 130px;
+      background: #fef3c7;
+      border-radius: 18px;
+      left: 50px;
+      top: 95px;
+      transform: rotate(-8deg);
+    }
+
+    .book::before {
+      content: "📘";
+      font-size: 88px;
+      position: absolute;
+      left: 50px;
+      top: 18px;
+    }
+
+    .brain {
+      width: 118px;
+      height: 118px;
+      background: #fbcfe8;
+      right: 20px;
+      top: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 62px;
+    }
+
+    .timer {
+      width: 98px;
+      height: 98px;
+      background: #bbf7d0;
+      right: 55px;
+      bottom: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 52px;
+    }
+
+    .spark1,
+    .spark2,
+    .spark3 {
+      position: absolute;
+      font-size: 34px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .spark1 { left: 20px; top: 20px; }
+    .spark2 { right: 150px; top: 145px; animation-delay: 0.5s; }
+    .spark3 { left: 125px; bottom: 10px; animation-delay: 1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .quick-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .quick-card {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+    }
+
+    body.dark-mode .quick-card,
+    body.dark-mode .section,
+    body.dark-mode .mini-card,
+    body.dark-mode .tool-card,
+    body.dark-mode .reflection-card {
+      background: rgba(15, 23, 42, 0.86);
+      border-color: #334155;
+      color: #e5e7eb;
+    }
+
+    .quick-card span {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .quick-card h4 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .quick-card p {
+      margin: 0;
+      color: var(--grey);
+      font-size: 14px;
+    }
+
+    body.dark-mode .quick-card p,
+    body.dark-mode .mini-card p,
+    body.dark-mode .tool-card p,
+    body.dark-mode .section p,
+    body.dark-mode li {
+      color: #cbd5e1;
+    }
+
+    .section {
+      margin-top: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      display: none;
+      animation: fadeUp 0.35s ease both;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .big-icon {
+      min-width: 70px;
+      height: 70px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.24);
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 42px);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .section .subtitle {
+      margin: 8px 0 0;
+      color: var(--grey);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 20px 0;
+    }
+
+    .mini-card,
+    .tool-card,
+    .reflection-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .mini-card h3,
+    .tool-card h3,
+    .reflection-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #dbeafe, #fce7f3);
+      color: #1e3a8a;
+      border-radius: 20px;
+      padding: 20px;
+      font-weight: 800;
+      margin: 20px 0;
+      border: 1px solid rgba(147, 197, 253, 0.7);
+    }
+
+    body.dark-mode .highlight {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(124, 58, 237, 0.28));
+      color: #e0f2fe;
+      border-color: #475569;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 6px 0;
+      color: #334155;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .tool-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      right: -48px;
+      bottom: -48px;
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .prompt {
+      background: #0f172a;
+      color: #e0f2fe;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-family: "Consolas", monospace;
+      font-size: 14px;
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
+    body.dark-mode .prompt {
+      background: #020617;
+      border: 1px solid #334155;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eff6ff;
+      color: #1e3a8a;
+    }
+
+    body.dark-mode th {
+      background: #1e293b;
+      color: #bfdbfe;
+    }
+
+    body.dark-mode td {
+      border-color: #334155;
+    }
+
+    .checklist label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 11px 13px;
+      margin: 8px 0;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    body.dark-mode .checklist label {
+      background: #020617;
+      border-color: #334155;
+    }
+
+    .checklist label:hover {
+      background: #eef6ff;
+      transform: translateX(2px);
+    }
+
+    body.dark-mode .checklist label:hover {
+      background: #1e293b;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--blue);
+      margin-top: 4px;
+    }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font: inherit;
+      resize: vertical;
+      min-height: 45px;
+      background: white;
+      color: var(--dark);
+    }
+
+    body.dark-mode textarea,
+    body.dark-mode input[type="text"] {
+      background: #020617;
+      color: #e5e7eb;
+      border-color: #334155;
+    }
+
+    .progress-wrap {
+      margin-top: 16px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--grey);
+      margin-bottom: 7px;
+    }
+
+    body.dark-mode .progress-label {
+      color: #cbd5e1;
+    }
+
+    .progress {
+      height: 12px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue), var(--pink));
+      transition: 0.3s;
+    }
+
+    .chapter-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .small-btn {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    body.dark-mode .small-btn {
+      background: #020617;
+      color: white;
+      border-color: #334155;
+    }
+
+    .small-btn.primary {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: white;
+      border: none;
+    }
+
+    .small-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+    }
+
+    .flashcard {
+      perspective: 1000px;
+      min-height: 180px;
+      cursor: pointer;
+    }
+
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      min-height: 180px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .flashcard.flipped .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flash-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #fef3c7, #dbeafe);
+      border: 1px solid rgba(251, 191, 36, 0.6);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .flash-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg, #dcfce7, #fce7f3);
+      color: #14532d;
+    }
+
+    .traffic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .traffic button {
+      border: none;
+      border-radius: 18px;
+      padding: 18px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.2s;
+      color: white;
+    }
+
+    .traffic button:hover {
+      transform: scale(1.03);
+    }
+
+    .green { background: var(--green); }
+    .yellow { background: #ca8a04; }
+    .red { background: var(--red); }
+
+    .quote {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 40px 0 0;
+      color: var(--grey);
+      font-weight: 800;
+    }
+
+    body.dark-mode .footer {
+      color: #cbd5e1;
+    }
+
+    .mobile-menu {
+      display: none;
+      margin-top: 14px;
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      font-weight: 800;
+      background: white;
+    }
+
+    body.dark-mode .mobile-menu {
+      background: #020617;
+      color: white;
+      border-color: #334155;
+    }
+
+    .print-cover {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .content-grid,
+      .tool-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .illustration {
+        min-height: 220px;
+      }
+
+      .school-logo {
+        width: 220px;
+        max-width: 50vw;
+      }
+
+      .brand-text {
+        font-size: 19px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .school-logo {
+        width: 100%;
+        max-width: 360px;
+      }
+
+      .brand-text {
+        font-size: 20px;
+        white-space: normal;
+      }
+
+      .top-actions {
+        justify-content: space-between;
+      }
+
+      .hero {
+        padding: 28px;
+        border-radius: 26px;
+      }
+
+      .hero-school-logo {
+        width: 100%;
+      }
+
+      .section {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .section-header {
+        flex-direction: column;
+      }
+
+      .quick-grid,
+      .traffic {
+        grid-template-columns: 1fr;
+      }
+
+      .book {
+        left: 10px;
+      }
+
+      .brain {
+        right: 0;
+      }
+
+      .timer {
+        right: 25px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .topbar,
+      .sidebar,
+      .chapter-actions,
+      .mobile-menu,
+      .hero-actions {
+        display: none !important;
+      }
+
+      .layout {
+        display: block;
+        padding: 0;
+      }
+
+      .hero,
+      .section,
+      .quick-card,
+      .mini-card,
+      .tool-card,
+      .reflection-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+      }
+
+      .section {
+        display: block !important;
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <img
+            src="holap-logo.jpg"
+            alt="Ho Lap College (Sponsored by Sik Sik Yuen)"
+            class="school-logo"
+          />
+
+          <div class="brand-text">
+            Study Smart, Not Hard!
+            <small>Ho Lap College (Sponsored by Sik Sik Yuen) Practical Study Skills Guide</small>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="pill-btn secondary" onclick="toggleDarkMode()">🌙 深色模式</button>
+          <button class="pill-btn" onclick="window.print()">🖨️ 列印 / 儲存 PDF</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h3>Contents 目錄</h3>
+        <div id="sideNav"></div>
+
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Learning Progress</span>
+            <span id="progressText">0%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="main-content">
+        <section class="hero" id="home">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-school-logo-wrap">
+                <img
+                  src="holap-logo.jpg"
+                  alt="Ho Lap College (Sponsored by Sik Sik Yuen)"
+                  class="hero-school-logo"
+                />
+              </div>
+
+              <div class="tag">✨ Secondary School Learning Toolkit</div>
+              <h1>Study Smart,<br />Not Hard!</h1>
+
+              <div class="school-name-hero">
+                Ho Lap College (Sponsored by Sik Sik Yuen)
+              </div>
+
+              <p>
+                A colourful and practical study skills guide for Form 1 to Form 6 students.
+                Learn how to set goals, manage time, take better notes, remember more,
+                revise effectively, prepare for exams and care for your wellbeing.
+              </p>
+
+              <div class="hero-actions">
+                <button class="white-btn" onclick="showSection(0)">Start Learning 🚀</button>
+                <button class="ghost-btn" onclick="document.getElementById('aiTools').scrollIntoView()">AI & YouTube Tips 🤖</button>
+              </div>
+            </div>
+
+            <div class="hero-card">
+              <div class="illustration" aria-label="Study illustration">
+                <div class="blob book"></div>
+                <div class="blob brain">🧠</div>
+                <div class="blob timer">⏱️</div>
+                <div class="spark1">⭐</div>
+                <div class="spark2">💡</div>
+                <div class="spark3">📚</div>
+              </div>
+
+              <div class="student-lines">
+                <div class="line">Name: ________________________</div>
+                <div class="line">Class: ________________________</div>
+                <div class="line">School Year: __________________</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <select class="mobile-menu" id="mobileMenu" onchange="showSection(Number(this.value))"></select>
+
+        <div class="quick-grid">
+          <div class="quick-card">
+            <span>🧠</span>
+            <h4>Active Learning</h4>
+            <p>Do, explain, practise and test yourself.</p>
+          </div>
+
+          <div class="quick-card">
+            <span>⏰</span>
+            <h4>Small Daily Steps</h4>
+            <p>15 minutes today is better than panic tomorrow.</p>
+          </div>
+
+          <div class="quick-card">
+            <span>🤖</span>
+            <h4>Use AI Wisely</h4>
+            <p>Ask for explanations, quizzes and feedback.</p>
+          </div>
+
+          <div class="quick-card">
+            <span>🌱</span>
+            <h4>Wellbeing Matters</h4>
+            <p>A healthy mind learns better.</p>
+          </div>
+        </div>
+
+        <div id="sections"></div>
+
+        <section class="section active" id="aiTools" style="display:block;">
+          <div class="section-header">
+            <div class="big-icon">🤖</div>
+            <div>
+              <h2>Bonus: Smart Use of YouTube and AI</h2>
+              <p class="subtitle">Use technology as a learning helper, not a shortcut.</p>
+            </div>
+          </div>
+
+          <div class="tool-grid">
+            <div class="tool-card">
+              <h3>▶️ YouTube Learning Checklist</h3>
+              <div class="checklist">
+                <label><input type="checkbox" /> I know the exact topic I am learning.</label>
+                <label><input type="checkbox" /> I choose an educational video.</label>
+                <label><input type="checkbox" /> I pause and take notes.</label>
+                <label><input type="checkbox" /> I do practice questions after watching.</label>
+                <label><input type="checkbox" /> I avoid clicking unrelated videos.</label>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h3>🤖 AI Learning Checklist</h3>
+              <div class="checklist">
+                <label><input type="checkbox" /> I use AI to understand, not to copy.</label>
+                <label><input type="checkbox" /> I check important answers with textbook or teacher.</label>
+                <label><input type="checkbox" /> I ask AI to quiz me.</label>
+                <label><input type="checkbox" /> I ask AI to explain my mistakes.</label>
+                <label><input type="checkbox" /> I submit my own work honestly.</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <div class="mini-card">
+              <h3>Useful AI Prompts</h3>
+              <div class="prompt">Explain this topic to a Form 2 student in simple English: __________.</div>
+              <div class="prompt">Create 10 quiz questions on __________. Ask one question at a time.</div>
+              <div class="prompt">Check my English paragraph and explain my mistakes.</div>
+              <div class="prompt">Make a 7-day revision timetable for my exam next week.</div>
+            </div>
+
+            <div class="mini-card">
+              <h3>Golden Rule</h3>
+              <p class="quote">
+                Technology should help you think better — not think for you.
+              </p>
+              <p>
+                Use YouTube and AI to clarify ideas, practise more, organise notes and build confidence.
+                Always stay honest and responsible.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer">
+          Ho Lap College (Sponsored by Sik Sik Yuen) Study Skills Booklet · Small steps every day can lead to big changes.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const chapters = [
+      {
+        icon: "🧠",
+        title: "Understanding How Learning Works",
+        subtitle: "Learn how your brain understands, remembers and uses knowledge.",
+        intro: "Learning is not only reading or listening. Real learning happens when you understand, connect, practise, review and improve.",
+        cards: [
+          {
+            h: "The Learning Cycle",
+            html: "<ol><li><strong>Receive:</strong> get information from lessons, books, videos or discussions.</li><li><strong>Understand:</strong> ask what, why and how.</li><li><strong>Practise:</strong> use the knowledge in questions or tasks.</li><li><strong>Review:</strong> revisit the topic after some time.</li><li><strong>Improve:</strong> correct mistakes and ask questions.</li></ol>"
+          },
+          {
+            h: "Active vs Passive Learning",
+            html: "<p><strong>Passive:</strong> only reading, copying, highlighting or watching.</p><p><strong>Active:</strong> explaining, testing, teaching, practising, making diagrams and asking questions.</p>"
+          }
+        ],
+        highlight: "Your brain learns better when it is active. Do not only look at knowledge — use it.",
+        tools: [
+          "Use YouTube to watch one short educational video, then write three key points.",
+          "Ask AI: Explain this topic in simple English for a Form ___ student.",
+          "Ask AI: Give me 10 quiz questions on this chapter."
+        ],
+        taskTitle: "Try It Today",
+        task: "Choose one difficult topic. Watch one useful video or ask AI for a simple explanation. Then explain the topic in your own words.",
+        reflection: ["Do I usually learn actively or passively?", "What can I do after each lesson to remember better?"]
+      },
+      {
+        icon: "🎯",
+        title: "Goal Setting",
+        subtitle: "Turn wishes into clear, realistic and achievable study goals.",
+        intro: "Goals give your learning direction. They help you know what to focus on and what steps to take.",
+        cards: [
+          {
+            h: "SMART Goals",
+            html: "<ul><li><strong>Specific:</strong> clear and exact</li><li><strong>Measurable:</strong> you can check progress</li><li><strong>Achievable:</strong> realistic</li><li><strong>Relevant:</strong> useful for your learning</li><li><strong>Time-bound:</strong> has a deadline</li></ul>"
+          },
+          {
+            h: "Example",
+            html: "<p><strong>Weak:</strong> I want to improve English.</p><p><strong>SMART:</strong> I will write one English paragraph every Wednesday and ask for feedback for four weeks.</p>"
+          }
+        ],
+        highlight: "A big goal becomes easier when you break it into small steps.",
+        tools: [
+          "Ask AI: Help me turn this goal into a SMART goal.",
+          "Ask AI: Give me a four-week plan to improve my vocabulary.",
+          "Use a calendar to mark your deadline."
+        ],
+        taskTitle: "My SMART Goal",
+        task: "Write one goal for this month. Make sure it is specific, measurable, achievable, relevant and time-bound.",
+        reflection: ["What is one learning goal I really care about?", "Who can support me in achieving this goal?"]
+      },
+      {
+        icon: "⏰",
+        title: "Time Management",
+        subtitle: "Use your time wisely for study, rest and activities.",
+        intro: "Time management does not mean studying every minute. It means planning your time so that important tasks are completed without panic.",
+        cards: [
+          {
+            h: "Priority Box",
+            html: "<table><tr><th>Type</th><th>Action</th></tr><tr><td>Important and urgent</td><td>Do first</td></tr><tr><td>Important but not urgent</td><td>Plan it</td></tr><tr><td>Not important but urgent</td><td>Limit it</td></tr><tr><td>Not important and not urgent</td><td>Reduce it</td></tr></table>"
+          },
+          {
+            h: "Pomodoro Method",
+            html: "<ol><li>Choose one task.</li><li>Study for 25 minutes.</li><li>Take a 5-minute break.</li><li>Repeat 3–4 times.</li><li>Take a longer break.</li></ol>"
+          }
+        ],
+        highlight: "Start early. A little revision every day is better than last-minute panic.",
+        tools: [
+          "Use phone calendar or school diary.",
+          "Use a timer app for Pomodoro study.",
+          "Ask AI: Make me a realistic study plan for this week."
+        ],
+        taskTitle: "Weekly Plan",
+        task: "List your homework, tests and activities for this week. Plan at least three revision sessions.",
+        reflection: ["When do I usually waste the most time?", "What is one thing I can change this week?"]
+      },
+      {
+        icon: "📝",
+        title: "Note-Taking Skills",
+        subtitle: "Create notes that help you understand and revise faster.",
+        intro: "Good notes are not copied words. They are clear, organised and written in your own words.",
+        cards: [
+          {
+            h: "Cornell Notes",
+            html: "<p>Divide your page into cue column, notes area and summary. Use the cue column for keywords and questions. Use the notes area for main ideas and examples.</p>"
+          },
+          {
+            h: "Mind Maps",
+            html: "<p>Put the topic in the centre, add main branches, then add details. Use colours, arrows and symbols to show connections.</p>"
+          }
+        ],
+        highlight: "Your notes should help future you revise quickly and clearly.",
+        tools: [
+          "Use Google Docs, OneNote or a notebook.",
+          "Ask AI: Organise these messy notes into bullet points.",
+          "Ask AI: Create 10 quiz questions from my notes."
+        ],
+        taskTitle: "Cornell Notes Practice",
+        task: "Choose one lesson today. Write three keywords, five key points and a two-sentence summary.",
+        reflection: ["Do I usually copy notes or create useful notes?", "Which note-taking method will I try this week?"]
+      },
+      {
+        icon: "🧩",
+        title: "Memory Techniques",
+        subtitle: "Remember more by reviewing and testing yourself.",
+        intro: "Memory improves with good methods. Reading again and again is not enough. You need to recall, connect and practise.",
+        cards: [
+          {
+            h: "Spaced Repetition",
+            html: "<p>Review on the same day, next day, three days later, one week later and before the test.</p>"
+          },
+          {
+            h: "Retrieval Practice",
+            html: "<p>Close your book and try to remember. Use flashcards, quizzes, past papers or teach a friend.</p>"
+          }
+        ],
+        highlight: "Reading tells your brain, “I have seen this.” Testing tells your brain, “I can remember this.”",
+        tools: [
+          "Ask AI: Quiz me on this topic one question at a time.",
+          "Ask AI: Create flashcards for these terms.",
+          "Use flashcard apps or paper cards."
+        ],
+        taskTitle: "Flashcard Challenge",
+        task: "Create five flashcards for vocabulary, formulas, dates or definitions.",
+        special: "flashcard",
+        reflection: ["Which memory technique works best for me?", "How often do I test myself without looking at notes?"]
+      },
+      {
+        icon: "📖",
+        title: "Reading Strategies",
+        subtitle: "Read with purpose: skim, scan and close read.",
+        intro: "Good readers use different strategies for different purposes. You do not need to read every text in the same way.",
+        cards: [
+          {
+            h: "Three Reading Modes",
+            html: "<ul><li><strong>Skimming:</strong> read quickly for the main idea.</li><li><strong>Scanning:</strong> search for names, dates, numbers or keywords.</li><li><strong>Close reading:</strong> read carefully for deep understanding.</li></ul>"
+          },
+          {
+            h: "Command Words",
+            html: "<table><tr><th>Word</th><th>Meaning</th></tr><tr><td>Describe</td><td>Say what it is like</td></tr><tr><td>Explain</td><td>Give reasons</td></tr><tr><td>Compare</td><td>Similarities and differences</td></tr><tr><td>Evaluate</td><td>Judgement with reasons</td></tr></table>"
+          }
+        ],
+        highlight: "Many marks are lost because students do not read questions carefully.",
+        tools: [
+          "Use online dictionaries for vocabulary.",
+          "Ask AI: Explain these words in simple English with examples.",
+          "Watch YouTube videos for pronunciation or background knowledge."
+        ],
+        taskTitle: "Reading Plan",
+        task: "Choose one text. Decide if you need to skim, scan or close read. Write three key points.",
+        reflection: ["Do I often read too quickly and miss details?", "Which command words do I need to understand better?"]
+      },
+      {
+        icon: "📵",
+        title: "Managing Distractions",
+        subtitle: "Protect your focus from phones, noise and procrastination.",
+        intro: "Distractions are powerful. Many apps are designed to keep your attention, so you need a focus plan.",
+        cards: [
+          {
+            h: "Common Triggers",
+            html: "<ul><li>Phone notifications</li><li>Social media</li><li>Studying in bed</li><li>Messy desk</li><li>Too many browser tabs</li><li>Feeling bored or stressed</li></ul>"
+          },
+          {
+            h: "The Two-Minute Start",
+            html: "<p>Tell yourself: I will only do this for two minutes. Open the book, write one sentence or do one question. Starting is often the hardest part.</p>"
+          }
+        ],
+        highlight: "Do not depend only on willpower. Design your environment for focus.",
+        tools: [
+          "Turn on focus mode.",
+          "Put your phone across the room.",
+          "Turn off YouTube autoplay.",
+          "Ask AI for help only after writing your purpose."
+        ],
+        taskTitle: "My Distraction Plan",
+        task: "Write your top three distractions and one solution for each.",
+        reflection: ["What distracts me most when I study?", "What rule will I follow for my phone this week?"]
+      },
+      {
+        icon: "🔁",
+        title: "Effective Revision",
+        subtitle: "Revise by recalling, practising, checking and improving.",
+        intro: "Revision is not just reading notes again. It is the process of strengthening memory and improving weak areas.",
+        cards: [
+          {
+            h: "Revision Cycle",
+            html: "<ol><li>Review notes.</li><li>Recall without looking.</li><li>Practise questions.</li><li>Check answers.</li><li>Improve weak areas.</li></ol>"
+          },
+          {
+            h: "Traffic Light System",
+            html: "<p><strong>Green:</strong> I understand well.<br><strong>Yellow:</strong> I partly understand.<br><strong>Red:</strong> I need help.</p>"
+          }
+        ],
+        highlight: "Spend more time on red and yellow topics. Do not only practise what you already know.",
+        tools: [
+          "Ask AI: Make a seven-day revision plan.",
+          "Ask AI: Give me mixed difficulty questions.",
+          "Use YouTube to revise one difficult topic, then practise."
+        ],
+        taskTitle: "Traffic Light Check",
+        task: "Choose four topics. Label each one green, yellow or red. Plan your next action.",
+        special: "traffic",
+        reflection: ["Do I spend more time reading or practising?", "What topic should I revise first and why?"]
+      },
+      {
+        icon: "🧪",
+        title: "Exam Preparation",
+        subtitle: "Prepare knowledge, skills, time and mindset before exams.",
+        intro: "Exams test more than memory. They test time management, reading, writing, problem-solving and calmness.",
+        cards: [
+          {
+            h: "Before Exams",
+            html: "<ul><li>Check the exam scope.</li><li>Organise notes.</li><li>List weak topics.</li><li>Make a revision timetable.</li><li>Practise timed questions.</li></ul>"
+          },
+          {
+            h: "During Exams",
+            html: "<ul><li>Read instructions carefully.</li><li>Plan time by marks.</li><li>Answer easier questions first.</li><li>Show working.</li><li>Check answers if time remains.</li></ul>"
+          }
+        ],
+        highlight: "After the exam, do not only look at the mark. Study your mistakes.",
+        tools: [
+          "Ask AI: Create a 30-minute practice test.",
+          "Ask AI: Explain why my answer is wrong.",
+          "Ask AI: Teach me how to answer explain questions better."
+        ],
+        taskTitle: "Exam Checklist",
+        task: "Tick off: exam scope, organised notes, weak topics, revision timetable, practice questions, corrected mistakes and stationery.",
+        reflection: ["What is my biggest exam challenge?", "What will I do differently for the next test or exam?"]
+      },
+      {
+        icon: "🌱",
+        title: "Managing Stress and Wellbeing",
+        subtitle: "A healthy body and mind help you learn better.",
+        intro: "Stress is normal, but too much stress can affect sleep, focus, memory and mood. You are not a machine.",
+        cards: [
+          {
+            h: "Healthy Study Habits",
+            html: "<ul><li>Sleep enough.</li><li>Drink water and eat regular meals.</li><li>Move your body.</li><li>Take short breaks.</li><li>Talk to someone you trust.</li></ul>"
+          },
+          {
+            h: "Quick Calm Technique",
+            html: "<p><strong>Box breathing:</strong> breathe in for 4 seconds, hold for 4, breathe out for 4, hold for 4. Repeat four times.</p>"
+          }
+        ],
+        highlight: "Asking for help is a sign of strength, not weakness.",
+        tools: [
+          "Use calming music or breathing videos.",
+          "Use a timer to plan breaks.",
+          "Ask AI to break a stressful task into smaller steps."
+        ],
+        taskTitle: "My Wellbeing Plan",
+        task: "Write three things that help you relax and three people you can talk to.",
+        reflection: ["What warning signs show that I am stressed?", "What is one kind thing I can say to myself?"]
+      },
+      {
+        icon: "🪞",
+        title: "Reflection and Action Plan",
+        subtitle: "Learn from experience and improve step by step.",
+        intro: "Reflection means thinking about what worked, what did not work and what you will improve next time.",
+        cards: [
+          {
+            h: "Growth Mindset",
+            html: "<p>Instead of saying “I am bad at Maths”, say “I am improving my Maths step by step.” Ability can grow with effort, strategy and support.</p>"
+          },
+          {
+            h: "3-2-1 Reflection",
+            html: "<ul><li>3 things I learned</li><li>2 things I need to improve</li><li>1 action I will take</li></ul>"
+          }
+        ],
+        highlight: "Successful students are not students who never fail. They are students who learn from mistakes.",
+        tools: [
+          "Ask AI: Help me reflect on my study habits this week.",
+          "Use a weekly diary or notes app.",
+          "Set one small improvement target every week."
+        ],
+        taskTitle: "Four-Week Action Plan",
+        task: "Choose one study skill to improve each week. Write your action and evidence.",
+        reflection: ["What am I proud of this week?", "What is one action I will take next week?"]
+      }
+    ];
+
+    const sideNav = document.getElementById("sideNav");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const sections = document.getElementById("sections");
+
+    function createNavigation() {
+      chapters.forEach((chapter, index) => {
+        const btn = document.createElement("button");
+        btn.className = "nav-btn";
+        btn.innerHTML = `<span class="nav-number">${index + 1}</span><span>${chapter.title}</span>`;
+        btn.onclick = () => showSection(index);
+        sideNav.appendChild(btn);
+
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = `${index + 1}. ${chapter.title}`;
+        mobileMenu.appendChild(option);
+      });
+    }
+
+    function createSections() {
+      chapters.forEach((chapter, index) => {
+        const section = document.createElement("section");
+        section.className = "section";
+        section.id = `chapter-${index}`;
+
+        let specialHTML = "";
+
+        if (chapter.special === "flashcard") {
+          specialHTML = `
+            <div class="mini-card">
+              <h3>Interactive Flashcard 點擊翻轉</h3>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flash-face">Question: What is retrieval practice?</div>
+                  <div class="flash-face flash-back">Answer: Testing yourself without looking at notes.</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (chapter.special === "traffic") {
+          specialHTML = `
+            <div class="mini-card">
+              <h3>Traffic Light Self-Check</h3>
+              <p>Click a colour to record how confident you feel today.</p>
+              <div class="traffic">
+                <button class="green" onclick="setTrafficMessage('Great! Review this later.')">Green</button>
+                <button class="yellow" onclick="setTrafficMessage('Practise more this week.')">Yellow</button>
+                <button class="red" onclick="setTrafficMessage('Ask your teacher, classmate or AI for help.')">Red</button>
+              </div>
+              <p id="trafficMessage" style="font-weight:900;margin-top:14px;"></p>
+            </div>
+          `;
+        }
+
+        section.innerHTML = `
+          <div class="section-header">
+            <div class="big-icon">${chapter.icon}</div>
+            <div>
+              <h2>${index + 1}. ${chapter.title}</h2>
+              <p class="subtitle">${chapter.subtitle}</p>
+            </div>
+          </div>
+
+          <p>${chapter.intro}</p>
+
+          <div class="content-grid">
+            ${chapter.cards.map(card => `
+              <div class="mini-card">
+                <h3>${card.h}</h3>
+                ${card.html}
+              </div>
+            `).join("")}
+          </div>
+
+          <div class="highlight">💡 ${chapter.highlight}</div>
+
+          <div class="tool-grid">
+            <div class="tool-card">
+              <h3>Useful Tools</h3>
+              <ul>
+                ${chapter.tools.map(tool => `<li>${tool}</li>`).join("")}
+              </ul>
+            </div>
+
+            <div class="tool-card">
+              <h3>${chapter.taskTitle}</h3>
+              <p>${chapter.task}</p>
+              <textarea placeholder="Write your answer here..."></textarea>
+            </div>
+          </div>
+
+          ${specialHTML}
+
+          <div class="reflection-card" style="margin-top:18px;">
+            <h3>Reflection Questions</h3>
+            ${chapter.reflection.map(q => `
+              <p><strong>${q}</strong></p>
+              <input type="text" placeholder="My answer..." />
+            `).join("")}
+          </div>
+
+          <div class="chapter-actions">
+            <button class="small-btn primary" onclick="markComplete(${index})">✓ Mark this chapter as completed</button>
+            <button class="small-btn" onclick="showSection(${Math.max(0, index - 1)})">← Previous</button>
+            <button class="small-btn" onclick="showSection(${Math.min(chapters.length - 1, index + 1)})">Next →</button>
+            <button class="small-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Back to Top ↑</button>
+          </div>
+        `;
+
+        sections.appendChild(section);
+      });
+    }
+
+    let completed = new Set();
+
+    function showSection(index) {
+      document.querySelectorAll(".section").forEach(sec => {
+        if (sec.id !== "aiTools") {
+          sec.classList.remove("active");
+          sec.style.display = "none";
+        }
+      });
+
+      const target = document.getElementById(`chapter-${index}`);
+      target.classList.add("active");
+      target.style.display = "block";
+
+      document.querySelectorAll(".nav-btn").forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+      });
+
+      mobileMenu.value = index;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function markComplete(index) {
+      completed.add(index);
+      updateProgress();
+
+      const buttons = document.querySelectorAll(".nav-btn");
+      if (buttons[index]) {
+        buttons[index].querySelector("span:last-child").textContent =
+          chapters[index].title + " ✓";
+      }
+    }
+
+    function updateProgress() {
+      const percent = Math.round((completed.size / chapters.length) * 100);
+      document.getElementById("progressText").textContent = percent + "%";
+      document.getElementById("progressBar").style.width = percent + "%";
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function setTrafficMessage(message) {
+      document.getElementById("trafficMessage").textContent = message;
+    }
+
+    createNavigation();
+    createSections();
+    showSection(0);
+  </script>
+</body>
+</html>
